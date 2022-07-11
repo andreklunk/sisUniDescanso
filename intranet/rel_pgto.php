@@ -49,7 +49,7 @@ exit;
 		//		'cod' => $registro['id_parcela'],
 		//		'valor' => $registro['descricao']
 		//	);
-		}	
+		//}	
 	?>
     <div class="col-md-5">
      <select name="parcela" id="parcela" class="form-control">
@@ -58,7 +58,7 @@ exit;
 	//foreach($dados as $item) {
  	// echo "<option value='{$item[cod]}'>{$item[valor]}</option>";
 	while($registro = mysqli_fetch_assoc($resultado)){
-	<option value=$registro['id_parcela']>$registro['descricao']</option>
+	echo "<option value=$registro['id_parcela']>$registro['descricao']</option>";
 	}
 	?>
     </select>
