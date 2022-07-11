@@ -41,7 +41,8 @@ exit;
 	  	include_once('conexao.php');
 		
 		$query = "Select id_parcela, descricao from
-					parcela order by id_parcela desc;";
+					parcela order by id_parcela desc;"; 
+					echo $query;
 		$resultado = mysqli_query($link, $query)or die(mysqli_error($link));
 		while($registro = mysqli_fetch_assoc($resultado)){
 			$dados[] = array (
