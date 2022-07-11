@@ -11,7 +11,7 @@ if (isset($_GET['acao'])=='V') {
 	include_once "conexao.php";
 	$query = "Select id_usuario, nome from usuario
 						where login = '$_POST[login]' and senha = '$_POST[senha]'";
-
+echo $query; exit;
 	$resultado = mysqli_query($link,$query) or die(mysql_error($link));
 	$registros = mysqli_num_rows($resultado);
 		
