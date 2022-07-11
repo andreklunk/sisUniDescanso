@@ -44,19 +44,21 @@ exit;
 					parcela order by id_parcela desc;"; 
 					
 		$resultado = mysqli_query($link, $query)or die(mysqli_error($link));
-		while($registro = mysqli_fetch_assoc($resultado)){
-			$dados[] = array (
-				'cod' => $registro['id_parcela'],
-				'valor' => $registro['descricao']
-			);
+		//while($registro = mysqli_fetch_assoc($resultado)){
+		//	$dados[] = array (
+		//		'cod' => $registro['id_parcela'],
+		//		'valor' => $registro['descricao']
+		//	);
 		}	
 	?>
     <div class="col-md-5">
      <select name="parcela" id="parcela" class="form-control">
     <option value="" selected="selected"> Selecione uma parcela </option>
      <?php
-	foreach($dados as $item) {
- 	 echo "<option value='{$item[cod]}'>'{$item[valor]}'</option>";
+	//foreach($dados as $item) {
+ 	// echo "<option value='{$item[cod]}'>{$item[valor]}</option>";
+	while($registro = mysqli_fetch_assoc($resultado)){
+	<option value=$registro['id_parcela']>$registro['descricao']</option>
 	}
 	?>
     </select>
