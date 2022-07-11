@@ -49,6 +49,7 @@ exit;
 				'cod' => $registro['id_parcela'],
 				'valor' => $registro['descricao']
 			);
+			echo $registro['descricao'];
 		}		
 	?>
     <div class="col-md-5">
