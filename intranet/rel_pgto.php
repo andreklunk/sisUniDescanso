@@ -49,15 +49,14 @@ exit;
 				'cod' => $registro['id_parcela'],
 				'valor' => $registro['descricao']
 			);
-			echo $registro['descricao'];
-		}		
+		}	
 	?>
     <div class="col-md-5">
      <select name="parcela" id="parcela" class="form-control">
     <option value="" selected="selected"> Selecione uma parcela </option>
      <?php
 	foreach($dados as $item) {
- 	 echo "<option value='{$item[cod]}'>{$item[valor]}</option>";
+ 	 echo "<option value='{$item[cod]}'>'{$item[valor]}'</option>";
 	}
 	?>
     </select>
