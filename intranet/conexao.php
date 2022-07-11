@@ -7,7 +7,7 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $link = new mysqli($server, $username, $password, $db);
-
+/*
 echo "INFORMAÇÕES DO BD <br>";
 echo $server; 
 echo "<br>";
@@ -16,6 +16,6 @@ echo "<br>";
 echo $username;
 echo " - ";
 echo $password; 
-
+*/
 mysqli_set_charset($link, "utf8");
 ?>
