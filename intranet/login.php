@@ -7,12 +7,12 @@ if ($_GET[acao]=='V') {
 	include "conexao.php";
 	$query = "Select id_usuario,nome from usuario
 						where login = '$_POST[login]' and senha = '$_POST[senha]'";
-	$resultado = mysql_query($query);
-	$registros = mysql_num_rows($resultado);
+	$resultado = mysqli_query($query);
+	$registros = mysqli_num_rows($resultado);
 		
 if ($registros > 0)
   {
-    $linha=mysql_fetch_array($resultado);
+    $linha=mysqli_fetch_array($resultado);
     $id_usuario = $linha['id_usuario'];
     $us_nome = $linha['nome'];
 	$_SESSION['us_id'] = $id_usuario;
