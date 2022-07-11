@@ -7,7 +7,7 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
-
+echo "ola";
 
 mysqli_set_charset($link, "utf8");
 ?>
