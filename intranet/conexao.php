@@ -7,6 +7,12 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $link = new mysqli($server, $username, $password, $db);
+    
+//TESTAR ERROS    
+    if($mysqli->connect_errno){
+        echo "Falha na Conexão: ".$mysqli->connect_errno;
+        echo "<br>".$mysqli->connect_error;
+    }
 /*
 echo "INFORMAÇÕES DO BD <br>";
 echo $server; 
