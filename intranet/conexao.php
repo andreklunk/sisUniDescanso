@@ -1,7 +1,6 @@
 <?php	
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-echo "ola";
-echo "ola";
+
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
